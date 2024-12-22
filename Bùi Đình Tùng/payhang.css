@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; /* Điều chỉnh các phần tử về bên trái */
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .tim-kiem {
+    width: 600px;
+    height: 30px;
+    border: 1px solid #9c9b9b;
+    border-radius: 4px;
+   
+  }
+  
+  .nuttim, .giohang,.thanhtoan {
+    height: 35px;
+    padding: 0 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+   
+  }
+  
+.nuttim:hover, .giohang:hover {
+    background-color: #0056b3;
+  }
+.img{
+    height: 600px;
+    margin-top: 20px;
+}
+.phanmua{
+    display: flex; 
+   margin: 0px
+
+}
+.gthieu{
+   margin-top: 150px; 
+}
+.tien{
+    color: red;
+   margin-bottom: 14px;
+   margin-top: 35px;
+}
+.muangay{
+    color: white;
+background-color: rgba(216, 22, 22, 0.897);
+    font-size: 20px;
+    height: 80px; 
+    width: 400px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    border: none; /* Không có đường viền */
+    border-radius: 12px; /* Bo tròn góc với bán kính 12px */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+}
+.muangay:hover{
+    color: rgb(155, 140, 140) ;
+}
+.hotro{
+    color: rgb(243, 24, 24);
+    margin-top: 50px;
+}
+.ttin{
+    font-size: medium;
+}

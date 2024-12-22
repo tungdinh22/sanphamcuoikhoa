@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Điều chỉnh các phần tử về bên trái */
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.tim-kiem {
+  width: 600px;
+  height: 30px;
+  border: 1px solid #9c9b9b;
+  border-radius: 4px;
+}
+
+.nuttim, .giohang ,.thanhtoan {
+  height: 35px;
+  padding: 0 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nuttim:hover, .giohang:hover,.thanhtoan:hover {
+  background-color: #0056b3;
+}
+
+.sidebar {
+  width: 250px;
+  padding-top: 100px;
+  background-color: rgb(148, 148, 148);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.main-content {
+  margin-left: 270px;
+  padding-top: 100px;
+}
+
+.git {
+  display: flex;
+  gap: 10px;
+}
+
+.git img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover; 
+  margin: 20px;
+}
+
+.product-details {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 300px;
+ text-align: center;
+ padding: 20px;
+ float: left;
+ gap: 30px;
+ margin: 30px;
+}
+
+.product-details img {
+  width: 200px;
+  height: auto;
+
+}
+
+.product-details p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.product-details button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-details button:hover {
+  background-color: #0056b3;
+}
+ .giaohang{
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  border-color: black;
+ }

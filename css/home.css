@@ -77,7 +77,15 @@ main {
   color: gray;
   text-decoration: line-through;
 }
+#products .card .btn {
+  background-color:#111311 ;
+  color: white;
+}
+ 
+#products .card .btn:hover{
+  background-color: #77867c;
 
+}
 /* footer */
 .giaohang {
   display: flex;

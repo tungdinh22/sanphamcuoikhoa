@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đăng nhập</title>
+    <link rel="stylesheet" href="../css/dangnhap.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Đăng nhập form -->
+        <div class="login-form" id="login-form">
+            <h2>Đăng Nhập</h2>
+            <form id="login">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="login-username" required>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Đăng Nhập</button>
+            </form>
+            <p>Chưa có tài khoản? <a href="javascript:void(0)" onclick="showSignup()">Đăng Ký</a></p>
+        </div>
+
+        <!-- Đăng ký form -->
+        <div class="signup-form" id="signup-form" style="display: none;">
+            <h2>Đăng Ký</h2>
+            <form id="signup">
+                <label for="signup-username">Tên đăng nhập:</label>
+                <input type="text" id="signup-username" required>
+                <label for="signup-password">Mật khẩu:</label>
+                <input type="password" id="signup-password" required>
+                <label for="confirm-password">Xác nhận mật khẩu:</label>
+                <input type="password" id="confirm-password" required>
+                <button type="submit">Đăng Ký</button>
+            </form>
+            <p>Đã có tài khoản? <a href="javascript:void(0)" onclick="showLogin()">Đăng Nhập</a></p>
+        </div>
+    </div>
+
+    <script src="../js/dangnhap.js"></script>
+</body>
+</html>

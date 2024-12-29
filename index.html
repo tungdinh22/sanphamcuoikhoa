@@ -4,181 +4,249 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="kt2.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
 
   <body>
-    <div class="container">
-    <nav class="navbar bg-body-tertiary">
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <a class="navbar-brand" href="#">TechWeb</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Account</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+    <!-- end nav -->
 
-
-      <div class="content">
-        <div class="sidebar">
-          <div class="navbar">
-            <a href="CHip">Chip</a>
-            <a href="Card">Card Đồ Hoạ</a>
-            <a href="Main">Main</a>
-            <a href="Quạt">Quạt tản nhiệt</a>
-            <a href="Ram">Ram</a>
-            <a href="Nguồn">Nguồn</a>
-            <a href="Tản nc">Tản nhiệt nước</a>
-            <a href="Ghế">Ghế Gaming</a>
-            <a href="chuột">Chuột</a>
-            <a href="Phím">Phím Cơ</a>
-            <a href="Loa">Loa</a>
-            <a href="Màn ">Màn Hình</a>
-            <a href="lót chuột">Lót chuột</a>
-            <a href="arm treo">Arm treo màn</a>
-            <a href="bàn">Bàn</a>
-            <a href="Quạt pk">Quạt trang trí</a>
-          </div>
-        </div>
-
-        <div class="main-content">
-          <div class="git">
-            <img
-              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/g/ggfe_1_.jpg"
-              alt=""
-            />
-            <img
-              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/1/0/1000_7_.png"
-              alt=""
-            />
-            <img
-              src="https://nguyencongpc.vn/media/product/250-26728-khung-pc-1.jpg"
-              alt="https://nguyencongpc.vn/media/product/250-26728-khung-pc-1.jpg"
-            />
-            <img
-              src="https://product.hstatic.net/200000420363/product/_star_phoenix_763f575d7c944840b329de355053bcd3_master.png"
-              alt=""
-            />
-          </div>
-
-          <div class="product-details">
-            <h1 class="mua">PC STAR ASUS PROART</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/voucher_25bc2964c1ef474aa18568a41820ca32_master.png"
-                alt=""
-            /></a>
-
-            <p>Intel I5 14600K, RTX 4070.</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC STAR ASUS Tk-1 White</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/147_7cf76c63f67a48938f92bb5159afe95d_master.png"
-                alt=""
-            /></a>
-            <p>Intel I5 14400F/ RTX 4060/ B760 WIFI/ RAM 32GB/ SSD 500GB</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC Gaming STAR Magic</h1>
-            <a href="muahang.html"
-              ><img
-                src="https://nguyencongpc.vn/media/product/250-26728-khung-pc-1.jpg"
-                alt=""
-            /></a>
-            <p>Intel I5 12400F/ RTX 4060/ B760/ RAM 16GB/ SSD 512GB</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC Gaming STAR Aether</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/aether_43d64fdcdab1429fb02ca64712e0ff68_master.png"
-                alt=""
-            /></a>
-            <p>Intel I5 12400F/ RTX 3060/ H610 WIFI/ RAM 16GB/ SSD 512.</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC Gaming STAR BATTLE White</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/45678_66f51bd8513c44eb811533bd3ad15c6f_master.png"
-                alt=""
-            /></a>
-            <p>Intel 12100F/ GTX 1650/ H610 WIFI/ RAM 16GB/ SSD 256GB .</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC Gaming STAR Phoenix</h1>
-            <a href="muahang.html"
-              ><img
-                src="https://product.hstatic.net/200000420363/product/phonix_22f139f40222414f9a32f2da7a4e488d_master.png"
-                alt=""
-            /></a>
-            <p>Intel 12400F/ RTX 4060/ B760 WIFI/ RAM 16GB/ SSD 512GB.</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC Gaming STAR Zero To Hero</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/zero1_703838eb737d4cc99a72a1e0cf49486a_master.png"
-                alt=""
-            /></a>
-
-            <p>Intel I5 14400F/ RTX 4060/ B760/ RAM 32GB/ SSD 500GB</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC STAR GAMING ASUS Z790 Hero Black</h1>
-            <a href="muahang.html"
-              ><img
-                src="https://product.hstatic.net/200000420363/product/1_2027796905c344a08b7221a9dc2ad91d_master.png"
-                alt=""
-            /></a>
-            <p>INTEL I9 14900K/ RTX 4090/ Z790 WIFI/ RAM 32GB/ SSD 1T.</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="product-details">
-            <h1 class="mua">PC STAR GAMING ASUS Z790 Formula White</h1>
-            <a href="muahang.html">
-              <img
-                src="https://product.hstatic.net/200000420363/product/1_5b18c6a72302433cab85ea12a9171688_master.png"
-                alt=""
-            /></a>
-            <p>INTEL I9 14900K/ RTX 4090/ Z790 WIFI/ RAM 32GB/ SSD 1T.</p>
-            <p>Giá: $10.00</p>
-            <button id="add">Thêm vào giỏ hàng</button>
-          </div>
-        </div>
+    <main>
+      <!-- slide bar -->
+      <div class="sidebar">
+        <a href="CHip" class="active">Chip</a>
+        <a href="Card">Card Đồ Hoạ</a>
+        <a href="Main">Main</a>
+        <a href="Quạt">Quạt tản nhiệt</a>
+        <a href="Ram">Ram</a>
+        <a href="Nguồn">Nguồn</a>
+        <a href="Tản nc">Tản nhiệt nước</a>
+        <a href="Ghế">Ghế Gaming</a>
+        <a href="chuột">Chuột</a>
+        <a href="Phím">Phím Cơ</a>
+        <a href="Loa">Loa</a>
+        <a href="Màn ">Màn Hình</a>
+        <a href="lót chuột">Lót chuột</a>
+        <a href="arm treo">Arm treo màn</a>
+        <a href="bàn">Bàn</a>
+        <a href="Quạt pk">Quạt trang trí</a>
       </div>
-    </div>
 
+      <div class="main-content">
+        <section id="banner">
+          <!-- carousel -->
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/len-doi-iphone-16-pro-max-tang-airpod-4-sliding.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/samsung-s24-ultra-home-20-11.webp"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/oppo-find-x8-mo-ban-home-6-12-24.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <section id="products">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-20-pro-plus_1__2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">TECNO SPARK 20PRO+ 8GB 256GB</h5>
+              <div class="card-price">
+                <p class="actual-price">4.750.000đ</p>
+                <p class="normal-price">6.000.000đ</p>
+              </div>
+              <a href="#" class="btn btn-primary">Check it now!</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- start footer -->
     <footer class="giaohang">
       <div>
-        <div style="display: flex; justify-content: center ;">
-            <p>TỔNG ĐÀI HỖ TRỢ (8:00 - 21:00)</p>
-            <ul>
-              <li>Mua hàng: 2900.6234</li>
-              <li>Bảo hành: 2900.6234</li>
-              <li>Email: cskh@tng.com</li>
-            </ul>
-          </div>
-        <p style="font-weight: bold; font-size: 20;">Đơn vị vận chuyển</p>
+        <div style="display: flex; justify-content: center">
+          <p>TỔNG ĐÀI HỖ TRỢ (8:00 - 21:00)</p>
+          <ul>
+            <li>Mua hàng: 2900.6234</li>
+            <li>Bảo hành: 2900.6234</li>
+            <li>Email: cskh@tng.com</li>
+          </ul>
+        </div>
+        <p style="font-weight: bold; font-size: 20">Đơn vị vận chuyển</p>
         <img
           src="data:image/png;base64,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"
           alt=""
@@ -205,9 +273,13 @@
         />
       </div>
     </footer>
- 
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <script src="./js/main.js"></script>
+    <!-- end footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

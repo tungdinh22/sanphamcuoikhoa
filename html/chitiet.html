@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/muahang.css" />
+  </head>
+
+  <body>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">TechWeb</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                id="home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./giohang.html" id="cart">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dangnhap.html" id="account"
+                >Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <div class="container">
+      <div class="phanmua">
+        <div class="d-flex">
+          <img
+            class="img"
+            id="product_image"
+            src="https://product.hstatic.net/200000420363/product/voucher_25bc2964c1ef474aa18568a41820ca32_master.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="gthieu">
+            <h1 id="product_name">
+              PC STAR ASUS PROART Intel I5 14600K, RTX 4070.
+            </h1>
+            <h1 class="tien" id="product_price">$10.00</h1>
+          </div>
+          <div>
+            <button class="muangay" id="payment_btn">Thêm vào giỏ hàng</button>
+            <h3 class="hotro">Hỗ trợ trả góp MPOS (Thẻ tín dụng)</h3>
+          </div>
+        </div>
+      </div>
+      <div class="ttin">
+        <h1>Thông số kỹ thuật</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brand</td>
+              <td id="product_brand">Otto</td>
+            </tr>
+            <tr>
+              <td>Highlight</td>
+              <td id="product_highlight">Thornton</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/muahang.js"></script>
+  </body>
+</html>

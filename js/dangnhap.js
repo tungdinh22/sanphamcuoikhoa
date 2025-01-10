@@ -1,4 +1,4 @@
-// Chức năng chuyển giữa  đăng nhập và đăng ký
+// Chức năng chuyển giữa  đăng nhập và đăng ký --------------------------------
 function showSignup() {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("signup-form").style.display = "block";
@@ -9,7 +9,7 @@ function showLogin() {
     document.getElementById("login-form").style.display = "block";
 }
 
-// Chức năng xử lý đăng nhập
+// Chức năng xử lý đăng nhập ----------------------------------------------
 document.getElementById("login").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -19,13 +19,15 @@ document.getElementById("login").addEventListener("submit", function(event) {
     // Kiểm tra tài khoản 
     if (username === "user" && password === "password123") {
         alert("Đăng nhập thành công!");
+        localStorage.setItem("isLoggedIn", true);
         // chuyển hướng 
+        window.location.href = "../index.html";
     } else {
         alert("Tên đăng nhập hoặc mật khẩu sai!");
     }
 });
 
-// xử lý đăng ký
+// xử lý đăng ký ---------------------------------------------------------
 document.getElementById("signup").addEventListener("submit", function(event) {
     event.preventDefault();
 

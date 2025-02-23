@@ -17,7 +17,7 @@ document.getElementById("login").addEventListener("submit", function(event) {
     const password = document.getElementById("login-password").value;
     
     // Kiểm tra tài khoản 
-    if (username === "user" && password === "password123") {
+    if (username === "tung" && password === "123456789") {
         alert("Đăng nhập thành công!");
         localStorage.setItem("isLoggedIn", true);
         // chuyển hướng 

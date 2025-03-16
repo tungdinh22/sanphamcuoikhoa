@@ -58,6 +58,7 @@
             <th>Số lượng</th>
             <th>Tổng</th>
             <th>Trạng thái</th>
+            <th>Mã Bảo Hành</th>
           </tr>
         </thead>
         <tbody>
@@ -67,10 +68,22 @@
             <td>1</td>
             <td>33.190.000đ</td>
             <td>Đã thanh toán</td>
+            <td>SP987654</td>
           </tr>
         </tbody>
       </table>
+      <div>
+        <button id="baohanh" onclick="goToWarranty()">Bảo hành</button>
+      
+      <script>
+          function goToWarranty() {
+              window.location.href = "http://127.0.0.1:5500/html/baohanh.html";
+          }
+      </script>
+        
+      </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

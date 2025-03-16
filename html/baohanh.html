@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Bảo Hành</title>
+    <link rel="stylesheet" href="../css/baohanh.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxLwRHJtPskXJyISdbnh6tFZDyOvC7hXP8QOAWvZ6Iszwr2xAReabzZSkevh8lpAIWDs8&usqp=CAU" alt="Logo" class="logo">
+        <h2>Tra Cứu Bảo Hành Sản Phẩm</h2>
+        <input type="text" id="serialNumber" placeholder="Nhập mã sản phẩm" list="history">
+        <datalist id="history"></datalist>
+        <button onclick="checkWarranty()">Kiểm Tra</button>
+        <div id="loading" class="loading">
+            <img src="assets/loading.gif" alt="Loading">
+        </div>
+        <div id="result"></div>
+        <h3>Lịch sử tìm kiếm</h3>
+        <ul id="historyList"></ul>
+    </div>
+    <script src="../js/baohanh.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.chatbox {
+    width: 300px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: none; /* Ẩn mặc định */
+}
+
+.chat-header {
+    background: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+input, select {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Nút mở chatbot */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}

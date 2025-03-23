@@ -1,9 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-  import {
-    getAuth,
-    signInWithEmailAndPassword,
-  } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js"; 
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js"; 
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,54 +24,56 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
 
-// Chức năng chuyển giữa  đăng nhập và đăng ký --------------------------------
-function showSignup() {
-    document.getElementById("login-form").style.display = "none";
-    document.getElementById("signup-form").style.display = "block";
-}
+    function showSignup() {
+        loginForm.style.display = "none";
+        signupForm.style.display = "block";
+    }
 
-function showLogin() {
-    document.getElementById("signup-form").style.display = "none";
-    document.getElementById("login-form").style.display = "block";
-}
+    function showLogin() {
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+    }
 
-// Chức năng xử lý đăng nhập ----------------------------------------------
-document.getElementById("login").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    const username = document.getElementById("login-username").value;
-    const password = document.getElementById("login-password").value;
-    
-    // Kiểm tra tài khoản 
-    if (username === "tung28" && password === "123456789") {
+    window.showSignup = showSignup;
+    window.showLogin = showLogin;
+
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (!email || !password) {
+            alert("Vui lòng nhập đầy đủ thông tin!");
+            return;
+        }
+
+        console.log("Đăng nhập với:", email, password);
         alert("Đăng nhập thành công!");
-        localStorage.setItem("isLoggedIn", true);
-        // chuyển hướng 
-        window.location.href = "../index.html";
-    } else {
-        alert("Tên đăng nhập hoặc mật khẩu sai!");
-    }
-});
+        // Thêm xử lý đăng nhập thực tế ở đây (API, Firebase, v.v.)
+    });
 
-// xử lý đăng ký ---------------------------------------------------------
-document.getElementById("signup").addEventListener("submit", function(event) {
-    event.preventDefault();
+    document.getElementById("signup-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const username = document.getElementById("signup-username").value;
+        const password = document.getElementById("signup-password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
 
-    const signupUsername = document.getElementById("signup-username").value;
-    const signupPassword = document.getElementById("signup-password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-    
-    if (signupPassword !== confirmPassword) {
-        alert("Mật khẩu xác nhận không khớp!");
-        return;
-    }
-    
-    // Kiểm tra điều kiện đăng ký 
-    if (signupUsername && signupPassword) {
+        if (!username || !password || !confirmPassword) {
+            alert("Vui lòng nhập đầy đủ thông tin!");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Mật khẩu xác nhận không khớp!");
+            return;
+        }
+
+        console.log("Đăng ký với:", username, password);
         alert("Đăng ký thành công!");
-        showLogin(); // Quay lại  đăng nhập sau khi đăng ký xong
-    } else {
-        alert("Vui lòng điền đầy đủ thông tin!");
-    }
+        showLogin(); // Chuyển về trang đăng nhập sau khi đăng ký
+    });
 });

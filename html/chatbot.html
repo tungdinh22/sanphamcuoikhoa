@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Hỗ Trợ</title>
+    <link rel="stylesheet" href="../css/chatbot.css">
+</head>
+<body>
+
+    <!-- Nút mở chatbot -->
+    <button id="openChatbot" class="chat-button">💬 Hỗ trợ</button>
+
+    <!-- Hộp chat -->
+    <div class="chatbox" id="chatbox">
+        <div class="chat-header">
+            <span>Chat với nhân viên tư vấn</span>
+            <button id="closeChatbot" class="close-btn">&times;</button>
+        </div>
+        <div class="chat-body">
+            <p>Em ở đây để hỗ trợ cho mình ạ</p>
+            <input type="text" id="name" placeholder="Nhập tên của bạn *">
+            <input type="email" id="email" placeholder="Nhập email của bạn">
+            <input type="text" id="phone" placeholder="Nhập số điện thoại của bạn *">
+            <select id="gender">
+                <option value="">Giới tính</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select>
+            <button id="startChat">BẮT ĐẦU TRÒ CHUYỆN</button>
+        </div>
+    </div>
+
+    <script src="../js/chatbot.js"></script>
+</body>
+</html>

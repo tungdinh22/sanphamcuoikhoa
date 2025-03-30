@@ -53,8 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("Đăng nhập với:", email, password);
         alert("Đăng nhập thành công!");
+// Đăng nhập chuyển về home
+  location.href = "../index.html" 
+
         // Thêm xử lý đăng nhập thực tế ở đây (API, Firebase, v.v.)
     });
+
 
     document.getElementById("signup-form").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -74,6 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("Đăng ký với:", username, password);
         alert("Đăng ký thành công!");
-        showLogin(); // Chuyển về trang đăng nhập sau khi đăng ký
+        showLogin(); 
     });
 });

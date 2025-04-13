@@ -13,7 +13,7 @@
 }
 
 .chat-header {
-    background: red;
+    background: rgb(0, 0, 0);
     color: white;
     padding: 10px;
     text-align: center;
@@ -32,7 +32,7 @@ input, select {
 
 button {
     width: 100%;
-    background: red;
+    background: rgb(0, 0, 0);
     color: white;
     padding: 10px;
     border: none;
@@ -41,14 +41,19 @@ button {
 
 /* Nút mở chatbot */
 .chat-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: red;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
+    
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgb(0, 0, 0);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 8px; 
+        width: 60px;
+        height: 60px;
+        text-align: center;
+    
 }

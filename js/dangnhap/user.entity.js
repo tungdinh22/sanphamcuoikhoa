@@ -1,4 +1,4 @@
-import { firestore } from "../home/firebase.js";
+import { firestore } from "../firebase.js";
 import {
   collection,
   getDocs,
@@ -12,9 +12,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-lite.js";
 
 // User constructor
-export default function User(email, username, cart = [], orders = []) {
+export default function User(email, cart = [], orders = []) {
   this.email = email;
-  this.username = username;
   this.cart = cart;
   this.orders = orders;
   return this;
@@ -43,11 +42,10 @@ export async function getUserList() {
 }
 
 // Thêm người dùng mới
-export async function addUser(email, username) {
+export async function addUser(email) {
   const usersRef = collection(firestore, "users");
   const userData = {
     email,
-    username,
     cart: [],
     orders: [],
     createdAt: serverTimestamp(),

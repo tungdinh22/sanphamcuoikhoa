@@ -55,12 +55,13 @@ function createProductCard(product) {
 
   const actualPrice = document.createElement("p");
   actualPrice.className = "actual-price";
-  actualPrice.innerHTML = product.realPrice * 23000;
+  actualPrice.innerHTML = formatVND (product.price * 25000)
+
 
   const normalPrice = document.createElement("p");
   normalPrice.className = "normal-price";
-  normalPrice.innerHTML = product.price * 23000;
-
+  normalPrice.innerHTML = formatVND (product.realPrice * 25000)
+ 
   cardPrice.appendChild(actualPrice);
   cardPrice.appendChild(normalPrice);
   cardBody.appendChild(cardPrice);
@@ -109,3 +110,11 @@ document.getElementById("categories").addEventListener("click", (event) => {
 });
 
 getProductByCategory();
+ 
+function formatVND(amount) {
+  if (isNaN(amount)) return '0 ₫';
+  return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " ₫";
+}
+
+
+

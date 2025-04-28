@@ -1,21 +1,47 @@
-// kiem tra xem co dang nhap chua -------------------------------------------
-if (localStorage.getItem("isLoggedIn")) {
-  document.getElementById("account").textContent = "Order History";
-  document.getElementById("account").href = "../html/lichsumuahang.html";
-} else {
-  document.getElementById("account").textContent = "Login";
-  document.getElementById("account").href = "../html/dangnhap.html";
-  //   khong cho click vao cart khi chua dang nhap
-  document.getElementById("cart").addEventListener("click", (event) => {
-    event.preventDefault();
-    alert("Vui lòng đăng nhập trước khi xem giỏ hàng!");
-    window.location.href = "../html/dangnhap.html";
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const currentUser = localStorage.getItem("userEmail");
 
-  //   khong cho click vao "payment - mua ngay" khi chua dang nhap
-  document.getElementById("payment_btn").addEventListener("click", (event) => {
-    event.preventDefault();
-    alert("Vui lòng đăng nhập trước khi xem giỏ hàng!");
-    window.location.href = "../html/dangnhap.html";
-  });
-}
+  const accountLink = document.getElementById("account");
+  const cartBtn = document.getElementById("cart");
+  const logoutBtn = document.getElementById("logout");
+  const loginBtn = document.getElementById("login");
+  const paymentBtn = document.getElementById("payment_btn");
+
+  if (currentUser) {
+    // ✅ Đã đăng nhập
+    accountLink.textContent = "Order History";
+    accountLink.href = "../html/lichsumuahang.html";
+
+    cartBtn.style.display = "inline-block";
+    logoutBtn.style.display = "inline-block";
+    if (loginBtn) loginBtn.style.display = "none";
+
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("userEmail");
+      alert("Bạn đã đăng xuất.");
+      location.reload();
+    });
+  } else {
+    // ❌ Chưa đăng nhập
+    accountLink.textContent = "Login";
+    accountLink.href = "../html/dangnhap.html";
+
+    cartBtn.style.display = "none";
+    logoutBtn.style.display = "none";
+    if (loginBtn) loginBtn.style.display = "inline-block";
+
+    cartBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Vui lòng đăng nhập trước khi xem giỏ hàng!");
+      location.href = "../html/dangnhap.html";
+    });
+
+    if (paymentBtn) {
+      paymentBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Vui lòng đăng nhập trước khi thanh toán!");
+        location.href = "../html/dangnhap.html";
+      });
+    }
+  }
+});

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentUser = localStorage.getItem("userEmail");
+  const currentUser = localStorage.getItem("currentUser");
 
   const accountLink = document.getElementById("account");
   const cartBtn = document.getElementById("cart");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loginBtn) loginBtn.style.display = "none";
 
     logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("userEmail");
+      localStorage.removeItem("currentUser");
       alert("Bạn đã đăng xuất.");
       location.reload();
     });

@@ -6,50 +6,40 @@ import {
   setDoc,
   getDoc,
   query,
-  serverTimestamp,
   where,
-  addDoc,
+  addDoc
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-lite.js";
 
 // User constructor
-export default function User(email, cart = [], orders = []) {
+export default function User(email, cart = []) {
   this.email = email;
-  this.cart = cart;
-  this.orders = orders;
+  this.cart = cart; // only product IDs
   return this;
 }
 
 // Local cache
 let users = [];
 
-// Lấy danh sách người dùng
+// Get all users
 export async function getUserList() {
   const usersRef = collection(firestore, "users");
   const querySnapshot = await getDocs(usersRef);
-  users = []; // clear previous cache
+  users = []; // clear cache
+
   querySnapshot.forEach((docSnap) => {
     const data = docSnap.data();
-    // Chỉ lấy các trường cần thiết => doi thanh object JS 
-    const userObject = new User(
-      data.email,
-      data.username,
-      data.cart,
-      data.orders
-    );
+    const userObject = new User(data.email, data.cart || []);
     users.push(userObject);
   });
+
   console.log(users);
 }
 
-// Thêm người dùng mới
-export async function addUser(email) {
+// Add new user (with optional initial cart)
+export async function addUser(email, cart = []) {
   const usersRef = collection(firestore, "users");
-  const userData = {
-    email,
-    cart: [],
-    orders: [],
-    createdAt: serverTimestamp(),
-  };
+  const userData = new User(email, cart);
+
   try {
     await addDoc(usersRef, userData);
     console.log(`User ${email} created.`);
@@ -58,21 +48,21 @@ export async function addUser(email) {
   }
 }
 
-// Lấy user theo email (và trả cả docId để update)
+// Get a user by email (with document ID)
 export async function getUserByEmail(email) {
   const q = query(collection(firestore, "users"), where("email", "==", email));
   const querySnapshot = await getDocs(q);
 
   if (!querySnapshot.empty) {
     const docSnap = querySnapshot.docs[0];
-    return { id: docSnap.id, ...docSnap.data() }; // return full object with docId
+    return { id: docSnap.id, ...docSnap.data() };
   } else {
     console.log("No such user!");
     return null;
   }
 }
 
-// Cập nhật giỏ hàng người dùng
+// Update user cart (replace with new array of product IDs)
 export async function updateUserCart(email, newCart) {
   const q = query(collection(firestore, "users"), where("email", "==", email));
   const querySnapshot = await getDocs(q);
@@ -80,34 +70,11 @@ export async function updateUserCart(email, newCart) {
   if (!querySnapshot.empty) {
     const userDoc = querySnapshot.docs[0];
     const userRef = userDoc.ref;
-
     try {
-      // merge true: chỉ cập nhật các trường đã có, không xóa các trường khác
-      // merge false: xóa các trường không có trong object mới
       await setDoc(userRef, { cart: newCart }, { merge: true });
       console.log(`Cart updated for user ${email}.`);
     } catch (error) {
       console.error("Error updating cart: ", error);
-    }
-  } else {
-    console.error(`User with email ${email} not found.`);
-  }
-}
-
-// Cập nhật đơn hàng người dùng
-export async function updateUserOrders(email, newOrders) {
-  const q = query(collection(firestore, "users"), where("email", "==", email));
-  const querySnapshot = await getDocs(q);
-
-  if (!querySnapshot.empty) {
-    const userDoc = querySnapshot.docs[0];
-    const userRef = userDoc.ref;
-    console.log(userRef);
-    try {
-      await setDoc(userRef, { orders: newOrders }, { merge: true });
-      console.log(`Orders updated for user ${email}.`);
-    } catch (error) {
-      console.error("Error updating orders: ", error);
     }
   } else {
     console.error(`User with email ${email} not found.`);

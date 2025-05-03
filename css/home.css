@@ -54,12 +54,11 @@ main {
   padding: 20px;
   gap: 20px;
   z-index: 0px;
-} 
+}
 
 #products .card {
   border: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
 }
 
 .card-price {
@@ -80,16 +79,16 @@ main {
   text-decoration: line-through;
 }
 #products .card .btn {
-  background-color:#111311 ;
+  background-color: #111311;
   color: white;
 }
- 
-#products .card .btn:hover{
-  background-color: #77867c;
 
+#products .card .btn:hover {
+  background-color: #77867c;
 }
 /* footer */
 .giaohang {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   background-color: aliceblue;

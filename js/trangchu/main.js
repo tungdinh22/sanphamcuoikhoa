@@ -30,6 +30,19 @@ function getProductByCategory(category = "all") {
     });
 }
 
+export async function getProductById(productId) {
+  // loc du lieu theo category
+  let url = root_url + `?id=${productId}`;
+  let product = null;
+  // lay du lieu tu api
+  try {
+    const data = await fetch(url).then((response) => response.json()); // json => js object
+    product = data.data.products[0];
+    return product;
+  } catch (error) {
+    throw new Error("API error: ", error);
+  }
+}
 function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "card";
@@ -55,13 +68,12 @@ function createProductCard(product) {
 
   const actualPrice = document.createElement("p");
   actualPrice.className = "actual-price";
-  actualPrice.innerHTML = formatVND (product.price * 25000)
-
+  actualPrice.innerHTML = formatVND(product.price * 25000);
 
   const normalPrice = document.createElement("p");
   normalPrice.className = "normal-price";
-  normalPrice.innerHTML = formatVND (product.realPrice * 25000)
- 
+  normalPrice.innerHTML = formatVND(product.realPrice * 25000);
+
   cardPrice.appendChild(actualPrice);
   cardPrice.appendChild(normalPrice);
   cardBody.appendChild(cardPrice);
@@ -70,33 +82,23 @@ function createProductCard(product) {
   btn.className = "btn";
   btn.innerHTML = "See details!";
   // bat su kien cho button chuyen trang detail
-  btn.addEventListener("click", () => {
-    getProductById(product.id);
+  btn.addEventListener("click", async () => {
+    await gotoDetailPage(product.id);
   });
   cardBody.appendChild(btn);
   card.appendChild(cardBody);
   return card;
 }
 // Chon xem chi tiet 1 san pham bang id ----------------------------------------------------
-function getProductById(id) {
-  fetch(`${root_url}?id=${id}`)
-    .then((response) => response.json())
-    .then((data) => {
-      // luu du lieu vao local storage de truy cap o trang khac
-      localStorage.setItem(
-        "currentProduct",
-        JSON.stringify(data.data.products[0])
-      );
-      // chuyen trang den trang chi tiet
-      window.location.href = "./html/chitiet.html";
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+async function gotoDetailPage(id) {
+  const product = await getProductById(id);
+  localStorage.setItem("currentProduct", JSON.stringify(product));
+  // chuyen trang den trang chi tiet
+  window.location.href = "./html/chitiet.html";
 }
 
 // bat su kien khi chuyen category ----------------------------------------------------
-document.getElementById("categories").addEventListener("click", (event) => {
+document.getElementById("categories")?.addEventListener("click", (event) => {
   const category = event.target.id;
   getProductByCategory(category);
   // chuyen active cho category da chon
@@ -109,12 +111,10 @@ document.getElementById("categories").addEventListener("click", (event) => {
   event.target.classList.add("active");
 });
 
-getProductByCategory();
- 
+// chi chay khi o trang main
+if (!location.href.includes("/html/")) getProductByCategory();
+
 function formatVND(amount) {
-  if (isNaN(amount)) return '0 ₫';
+  if (isNaN(amount)) return "0 ₫";
   return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " ₫";
 }
-
-
-

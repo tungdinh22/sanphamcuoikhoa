@@ -10,10 +10,7 @@
   <body>
     <main>
       <div class="form-container">
-        <form
-          class="checkout-form"
-          onsubmit="return redirectToThankYouPage(event)"
-        >
+        <form class="checkout-form" id="checkout-form">
           <div class="form-section billing-section">
             <h3 class="section-title">Billing Address</h3>
             <div class="form-group">
@@ -186,35 +183,22 @@
           </div>
 
           <div class="button-group">
-            
-            <button
-              type="submit"
-            
-              class="submit-button"
-              onClick="redirectToThankYouPage()"
-            >
-             Thanh Toán
+            <button type="submit" class="submit-button" style="color: white">
+              Thanh Toán
             </button>
 
             <button
               type="button"
               class="cancel-button"
-              onClick="window.location.href = '../index.html'"
+              onClick="window.location.href = './giohang.html'"
             >
               Cancel
             </button>
           </div>
-          
         </form>
       </div>
     </main>
-   
-    <script src="../js/payment.js"></script>
-    <script>
-      function redirectToThankYouPage(event) {
-        event.preventDefault(); // Ngăn chặn gửi form mặc định
-        window.location.href = "../html/lichsumuahang.html"; // Chuyển hướng tới trang thank-you.html
-      }
-    </script>
+
+    <script type="module" src="../js/thanhtoan/payment.js"></script>
   </body>
 </html>

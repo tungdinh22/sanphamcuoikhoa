@@ -32,13 +32,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+              <a class="nav-link active" aria-current="page" href="#" id="home"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./html/giohang.html" id="cart">Cart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./html/dangnhap.html" id="account">Account</a>
+              <a class="nav-link" id="account">Account</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="logout">Logout</a>
@@ -174,17 +176,27 @@
           height="200"
         />
         <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"
+        ></script>
       </div>
     </footer>
     <!-- end footer -->
 
-  <div>
-    <iframe src="./html/chatbot.html" width="350" height="500" style="border: none; position: fixed; bottom: 20px; right: 20px;"></iframe>
-  </div>
+    <div>
+      <iframe
+        src="./html/chatbot.html"
+        style="
+          border: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 350px;
+          height: 500px;
+        "
+      ></iframe>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -192,8 +204,6 @@
     ></script>
     <script type="module" src="./js/firebase.js"></script>
     <script src="./js/trangchu/nav.js"></script>
-    <script src="./js/trangchu/main.js"></script> 
-
+    <script type="module" src="./js/trangchu/main.js"></script>
   </body>
-
 </html>

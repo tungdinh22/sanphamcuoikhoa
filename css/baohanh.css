@@ -1,43 +1,38 @@
-body {
-    font-family: 'Arial', sans-serif;
+main {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #666363, #000000);
-    margin: 0;
+    margin-top: 30px;
+    padding: 30px;
 }
+.baohanh-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-.logo {
+  .logo {
     width: 80px;
     margin-bottom: 10px;
-}
+  }
 
-h2 {
+  h2 {
     margin-bottom: 15px;
     color: #333;
-}
+  }
 
-input {
+  input {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 2px solid #000000;
     border-radius: 5px;
     font-size: 16px;
-}
+  }
 
-button {
+  button {
     background: #000000;
     color: white;
     padding: 10px 15px;
@@ -46,34 +41,34 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
-}
+  }
 
-button:hover {
+  button:hover {
     background: #000000;
-}
+  }
 
-#result {
+  #result {
     margin-top: 15px;
     font-weight: bold;
     padding: 10px;
-}
+  }
 
-.loading {
+  .loading {
     display: none;
     margin-top: 15px;
-}
+  }
 
-h3 {
+  h3 {
     margin-top: 20px;
     color: #333;
-}
+  }
 
-#historyList {
+  #historyList {
     list-style: none;
     padding: 0;
-}
+  }
 
-#historyList li {
+  #historyList li {
     background: #f1f1f1;
     padding: 8px;
     margin-top: 5px;
@@ -81,8 +76,9 @@ h3 {
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
-}
+  }
 
-#historyList li:hover {
+  #historyList li:hover {
     background: #ddd;
+  }
 }
